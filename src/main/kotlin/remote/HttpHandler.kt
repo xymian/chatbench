@@ -19,14 +19,14 @@ val client = HttpClient(CIO) {
 }
 
 suspend fun HttpClient.postWithBaseUrl(endpoint: String, block: HttpRequestBuilder.() -> Unit): HttpResponse {
-    return post("BuildConfig.CHAT_HISTORY_BASE_URL" + endpoint) {
+    return post("http://192.168.0.2" + endpoint) {
         contentType(ContentType.Application.Json)
         block()
     }
 }
 
 suspend fun HttpClient.getWithBaseUrl(endpoint: String, block: HttpRequestBuilder.() -> Unit): HttpResponse {
-    return get("BuildConfig.CHAT_HISTORY_BASE_URL" + endpoint) {
+    return get("http://192.168.0.2" + endpoint) {
         block()
     }
 }

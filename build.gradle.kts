@@ -3,7 +3,7 @@ plugins {
     kotlin("plugin.serialization") version "2.2.0"
 }
 
-group = "com.te6lim"
+group = "com.simulatedTez"
 version = "1.0-SNAPSHOT"
 
 repositories {
